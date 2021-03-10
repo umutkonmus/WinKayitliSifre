@@ -12,7 +12,7 @@ def FindNetwork():
 Aglar = list(FindNetwork())
 print(Aglar)
  
-AgSec = input("Please type target network name :").strip()
+AgSec = input("Hedef ağın ismini girin :").strip()
 if AgSec in Aglar:
     HefefBilgi = str(subprocess.check_output(["netsh","wlan","show","profiles",SelectNetwork,"key=clear"]),"cp437").split("\n")
     for p in HefefBilgi:
